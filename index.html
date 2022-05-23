@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+#show_products {
+    margin-left: 45%;
+    padding: .6rem 3rem;
+    margin-top: 10px;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#products {
+    /* border: 1px solid red; */
+    max-width: 20rem;
+    font-size: 2.3rem;
+    margin-left: 48%;
+    margin-top: 5rem;
+}
+input{
+    margin-left: -4rem;
+    padding: 0.3rem 10rem;
+}
+
+#add_product {
+    padding: .1rem 16rem; 
+    margin-top: 3rem;
+    margin-left: -17%;
+    font-size: 1.5rem;
+}
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <!--Create Show Products button here, give id as "show_products". avoid making spelling mistakes in HTML id's-->
+      <a href="./inventory.html"> <button id="show_products">Show Products</button></a>
+    </div>
+    <div>
+      <h2>Add Products</h2>
+      <!--Create a form here to accept product data from user, give form HTML id as "products"-->
+      <div class="container">
+        <form onsubmit="addProduct(event)" id="products">
+                <!--Create four inputs to accept Type, Description, price, & image-->
+      <!--give the inputs following respective id's, "type", "desc", "price","image"-->
+      <!--create a "Add Product" button to submit form, give it html id as "add_product"-->
+          <input type="text" id="type" name="type" placeholder="Type">
+          <br><br>
+          <input type="text" id="desc" name="desc" placeholder="Description">
+          <br><br>
+          <input type="number" id="price" name="price" placeholder="Price">
+          <br><br>
+          <input type="url" name="url" id="image" placeholder="Image">
+
+          <button id="add_product" type="submit">Add Products</button>
+
+        </form>
+      </div>
+
+      </form>
+    </div>
+  </body>
+</html>
+
+<script src="./scripts/index.js"></script>
